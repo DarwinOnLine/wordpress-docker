@@ -25,7 +25,7 @@ This complete stack run with docker and [docker-compose (1.7 or higher)](https:/
       * `MYSQL_USER`: Your MySQL user (for Wordpress).
       * `MYSQL_PASSWORD`: Your MySQL user password (for Wordpress).
       * `MYSQL_DATABASE`: Your MySQL database (for Wordpress).
-      * `WORDPRESS_IMAGE`: Wordpress image, default to the latest apache version: `wordpress` (See Docker Hub for [Wordpress](https://hub.docker.com/_/wordpress).
+      * `WORDPRESS_IMAGE`: Wordpress image, default to the latest apache version: `wordpress` (See Docker Hub for [Wordpress](https://hub.docker.com/_/wordpress)).
       * `WORDPRESS_TABLE_PREFIX`: Your prefix tables for Wordpress
       * `WORDPRESS_DEBUG`: Enable the debug mode if non-empty.
       * ... and some another options (see details in `.env.dist` and in the Docker Hub for [Wordpress](https://hub.docker.com/_/wordpress)) 
