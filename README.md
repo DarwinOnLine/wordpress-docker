@@ -113,5 +113,5 @@ For a theme, replace this line:
 ```
 with this line:
 ```
-# !wordpress/wp-content/themes/your_theme
+!wordpress/wp-content/themes/your_theme
 ```
