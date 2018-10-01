@@ -115,3 +115,6 @@ with this line:
 ```
 !wordpress/wp-content/themes/your_theme
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDarwinOnLine%2Fwordpress-docker.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDarwinOnLine%2Fwordpress-docker?ref=badge_large)
