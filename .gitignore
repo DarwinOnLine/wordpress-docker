@@ -1,19 +1,19 @@
-*.log
-wp-config.php
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/uploads/
-wp-content/mu-plugins/
-wp-content/wp-cache-config.php
-wp-content/plugins/hello.php
+/.data
+/.env
 
-/.htaccess
-/license.txt
-/readme.html
-/sitemap.xml
-/sitemap.xml.gz
+wordpress/*
+!wordpress/wp-content
 
+wordpress/wp-content/*
+!wordpress/wp-content/plugins
+!wordpress/wp-content/themes
+
+wordpress/wp-content/plugins/*
+!wordpress/wp-content/plugins/.gitkeep
+# Your plugin :
+# !wordpress/wp-content/plugins/your_plugin
+
+wordpress/wp-content/themes/*
+!wordpress/wp-content/themes/.gitkeep
+# Your theme :
+# !wordpress/wp-content/themes/your_theme

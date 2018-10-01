@@ -1,0 +1,41 @@
+version: '3.3'
+
+services:
+  web:
+    container_name: ${COMPOSE_PROJECT_NAME}_web
+    hostname: ${COMPOSE_HOSTNAME}
+    build:
+      context: .docker
+      args:
+        WORDPRESS_IMAGE: ${WORDPRESS_IMAGE}
+    volumes:
+      - ./wordpress:/var/www/html/
+    ports:
+      - 80:80
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: ${COMPOSE_PROJECT_NAME}_db
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
+      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX}
+      WORDPRESS_DB_USER: ${MYSQL_USER}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+      WORDPRESS_DEBUG: ${WORDPRESS_DEBUG}
+
+  db:
+    container_name: ${COMPOSE_PROJECT_NAME}_db
+    image: ${SGBD_TYPE}
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./.data/db:/var/lib/mysql
+
+  phpmyadmin:
+    container_name: ${COMPOSE_PROJECT_NAME}_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    hostname: ${COMPOSE_HOSTNAME}
+    ports:
+      - 81:80
