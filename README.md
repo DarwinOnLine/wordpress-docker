@@ -52,7 +52,7 @@ Just run `docker-compose up -d`, then:
 
 Have a look at the `docker-compose.yml` file, here are the `docker-compose` built images:
 
-* `webp`: This is the web container with an apache and your code,
+* `web`: This is the web container with an apache and your code,
 * `db`: This is the databases container,
 * `phpmyadmin`: This is the PhpMyAdmin container, to manage yours databases,
 
